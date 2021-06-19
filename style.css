@@ -1,0 +1,92 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 0;
+}
+
+body main {
+  border: 1px solid black;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  padding: 40px 30px 30px 30px;
+}
+
+body main .top-bar .part-name {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+body main .top-bar select {
+  float: right;
+  font-size: 22px;
+  border: none;
+  background-color: transparent;
+  color: #2660b1;
+}
+
+body main #drop-area {
+  overflow: auto;
+  width: 100%;
+  max-height: 90%;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+body main #drop-area .my-form {
+  margin: 20px auto;
+  text-align: center;
+}
+
+body main #drop-area .my-form .button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+body main #drop-area .my-form .button:hover {
+  background: #ddd;
+}
+
+body main #drop-area .my-form #fileElem {
+  display: none;
+}
+
+body main #drop-area div {
+  min-height: 252px;
+}
+
+.dashedBorder {
+  border: 3px dashed #ccc;
+}
+
+.highlight {
+  border-color: purple !important;
+}
+
+.grid-ctn {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  grid-gap: 20px 20px;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
