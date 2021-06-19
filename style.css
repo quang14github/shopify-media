@@ -6,6 +6,19 @@
   font-family: sans-serif;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+#drop-area::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#drop-area {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -14,6 +27,7 @@ body {
 
 body main {
   border: 1px solid black;
+  border-radius: 10px;
   width: 60%;
   height: 100%;
   margin: auto;
@@ -41,12 +55,24 @@ body main #drop-area {
   border-radius: 20px;
 }
 
-body main #drop-area .my-form {
-  margin: 20px auto;
+body main #drop-area .upload-area {
+  min-height: 252px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #drop-area .upload-area .my-form {
   text-align: center;
 }
 
-body main #drop-area .my-form .button {
+body main #drop-area .upload-area .my-form .button {
   display: inline-block;
   padding: 10px;
   background: #ccc;
@@ -56,16 +82,54 @@ body main #drop-area .my-form .button {
   margin-bottom: 20px;
 }
 
-body main #drop-area .my-form .button:hover {
+body main #drop-area .upload-area .my-form .button:hover {
   background: #ddd;
 }
 
-body main #drop-area .my-form #fileElem {
+body main #drop-area .upload-area .my-form #fileElem {
   display: none;
 }
 
-body main #drop-area div {
+body main #drop-area .imgDiv {
+  position: relative;
   min-height: 252px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #drop-area .imgDiv input[type="checkbox"], body main #drop-area .imgDiv img {
+  display: none;
+}
+
+body main #drop-area .imgDiv:hover {
+  -webkit-box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
+          box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
+}
+
+body main #drop-area .imgDiv:hover input[type="checkbox"] {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+body main #drop-area .imgDiv:hover img {
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 .dashedBorder {
@@ -79,14 +143,52 @@ body main #drop-area div {
 .grid-ctn {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: 24% 24% 24% 24%;
+      grid-template-columns: 24% 24% 24% 24%;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-  grid-gap: 20px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-row-gap: 15px;
 }
 
 .hide {
   display: none;
+}
+
+.loader {
+  margin: auto;
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #3498db;
+  border-right: 12px solid #3498db;
+  border-bottom: 12px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1s linear infinite;
+  /* Safari */
+  animation: spin 0.7s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

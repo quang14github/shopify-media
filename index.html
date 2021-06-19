@@ -18,12 +18,14 @@
         </select>
     </div>
     <div id="drop-area" class="dashedBorder">
-        <form class="my-form">
-            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-            <label class="button" for="fileElem">Add file</label>
-            <br>
-            <span>or drop files to upload</span>
-        </form>
+        <div class="upload-area">
+            <form class="my-form">
+                <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Add file</label>
+                <br>
+                <span>or drop files to upload</span>
+            </form>
+        </div>
     </div>
   </main>
     <script src="script.js"></script>
