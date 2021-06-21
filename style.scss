@@ -38,15 +38,24 @@ body {
         background-color: transparent;
         color: #2660b1;
       }
+      .delete-btn {
+        display: none;
+         float: right;
+         font-size: 22px;
+         color: red;
+         border: none;
+         cursor: pointer;
+         background-color: transparent;
+      }
     }
     #drop-area {
       overflow: auto;
       width: 100%;
       max-height: 90%;
       margin-top: 40px;
-      border-radius: 20px;
+      border-radius: 10px;
       .upload-area {
-        min-height: 252px;
+        min-height: 254px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,8 +63,7 @@ body {
           text-align: center;
           .button {
             display: inline-block;
-            padding: 10px;
-            background: #ccc;
+            padding: 15px;
             cursor: pointer;
             border-radius: 5px;
             border: 1px solid #ccc;
@@ -69,36 +77,35 @@ body {
           }
         }
       }
+      div {
+        border-radius: 10px;
+      }
       .imgDiv {
         position: relative;
-        min-height: 252px;
+        min-height: 254px;
         background-position: center;
         background-repeat: no-repeat;
-        border-radius: 10px;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
-        input[type="checkbox"], img {
+        input[type="checkbox"] {
           display: none;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          border-radius: 5px;
         }
-        &:hover {
-          box-shadow: inset 0px 200px 235px -68px rgba(129,133,136,0.73);
-          input[type="checkbox"] {
-            display: block;
-               width: 20px;
-               height: 20px;
-               position: absolute;
-               top: 10px;
-               left: 10px;
-               border-radius: 5px;
-          }
-          img {
-            display: block;
-             width: 30px;
-             height: 30px;
-          }
+        img {
+          width: 0;
+          height: 30px;
         }
       }
+    }
+    @media screen and (max-width: 900px) {
+        width: 90%;
     }
   }
 }
@@ -130,14 +137,33 @@ body {
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 0.7s linear infinite;
 }
-
+.hoverEffect {
+  box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
+  input[type="checkbox"] {
+     display: block !important;
+  }
+  img {
+    width: 30px !important;
+  }
+}
+.invisible {
+  visibility: hidden;
+}
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

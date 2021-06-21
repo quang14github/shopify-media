@@ -47,16 +47,26 @@ body main .top-bar select {
   color: #2660b1;
 }
 
+body main .top-bar .delete-btn {
+  display: none;
+  float: right;
+  font-size: 22px;
+  color: red;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 body main #drop-area {
   overflow: auto;
   width: 100%;
   max-height: 90%;
   margin-top: 40px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 body main #drop-area .upload-area {
-  min-height: 252px;
+  min-height: 254px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,8 +84,7 @@ body main #drop-area .upload-area .my-form {
 
 body main #drop-area .upload-area .my-form .button {
   display: inline-block;
-  padding: 10px;
-  background: #ccc;
+  padding: 15px;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -90,12 +99,16 @@ body main #drop-area .upload-area .my-form #fileElem {
   display: none;
 }
 
+body main #drop-area div {
+  border-radius: 10px;
+}
+
 body main #drop-area .imgDiv {
   position: relative;
-  min-height: 252px;
+  min-height: 254px;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,17 +120,8 @@ body main #drop-area .imgDiv {
           align-items: center;
 }
 
-body main #drop-area .imgDiv input[type="checkbox"], body main #drop-area .imgDiv img {
+body main #drop-area .imgDiv input[type="checkbox"] {
   display: none;
-}
-
-body main #drop-area .imgDiv:hover {
-  -webkit-box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
-          box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
-}
-
-body main #drop-area .imgDiv:hover input[type="checkbox"] {
-  display: block;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -126,10 +130,15 @@ body main #drop-area .imgDiv:hover input[type="checkbox"] {
   border-radius: 5px;
 }
 
-body main #drop-area .imgDiv:hover img {
-  display: block;
-  width: 30px;
+body main #drop-area .imgDiv img {
+  width: 0;
   height: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  body main {
+    width: 90%;
+  }
 }
 
 .dashedBorder {
@@ -169,6 +178,23 @@ body main #drop-area .imgDiv:hover img {
   -webkit-animation: spin 1s linear infinite;
   /* Safari */
   animation: spin 0.7s linear infinite;
+}
+
+.hoverEffect {
+  -webkit-box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
+          box-shadow: inset 0px 200px 235px -68px rgba(129, 133, 136, 0.73);
+}
+
+.hoverEffect input[type="checkbox"] {
+  display: block !important;
+}
+
+.hoverEffect img {
+  width: 30px !important;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 /* Safari */
