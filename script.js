@@ -85,6 +85,7 @@ function previewFile(file) {
     reader.onloadend = function () {
         div.removeChild(loader);
         div.removeChild(loadStatus);
+        divCtn.style.backgroundImage = "";
         div.innerHTML = `<input type="checkbox" draggable="false">
         <img src="./zoom.png" alt="" draggable="false" id="zoom">`;
         div.querySelector("input[type=checkbox").addEventListener("click", selectImg);
