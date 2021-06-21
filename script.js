@@ -69,6 +69,7 @@ function previewFile(file) {
         div.appendChild(loadStatus);
         divCtn.appendChild(div);
         divCtn.style.border = "1px solid #C3C7CA";
+        divCtn.style.backgroundImage = "url('./shopify-logo.png')";
         dropArea.replaceChild(divCtn, uploadArea);
         dropArea.children[0].style.gridColumn = "1/span 2";
         dropArea.children[0].style.gridRow = "1/span 2";

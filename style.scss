@@ -79,6 +79,9 @@ body {
       }
       div {
         border-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40%;
       }
       .imgDiv {
         position: relative;
@@ -126,14 +129,14 @@ body {
   display: none;
 }
 .loader {
-  margin: auto;
-  border: 12px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 12px solid #3498db;
-  border-right: 12px solid #3498db;
-  border-bottom: 12px solid #3498db;
-  width: 60px;
-  height: 60px;
+  border: 4px solid #f3f3f3;
+  border-radius: 50% !important;
+  border-top: 4px solid #599E99;
+  border-right: 4px solid #599E99;
+  border-bottom: 4px solid #599E99;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 0.7s linear infinite;
 }
